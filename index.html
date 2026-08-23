@@ -12,7 +12,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Zahradnické služby Štěpán s.r.o.", "description": "Zahradnické služby Štěpán s.r.o. je prověřovaná firma s oprávněním pro: zahradnické služby štěpán s.r.o.. Pracujeme pořádně, férově a za dohodnutou cenu.", "address": {"@type": "PostalAddress", "streetAddress": "Kolínská 136, Kluk, 29001 Poděbrady", "addressLocality": "Poděbrady", "addressCountry": "CZ"}, "areaServed": "Poděbrady", "knowsAbout": ["Zahradnické služby Štěpán s.r.o."]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -74,35 +74,32 @@ footer{border-top:1px solid var(--navline);padding:36px 0;margin-top:30px}
 .hours strong{color:var(--text)}
 
 
-:root{--cardbg:#27272a;
---cardline:#2a2a35;
+:root{--cardbg:#ffffff;
+--cardline:#eef0f3;
 --iconbg:color-mix(in srgb,var(--accent) 14%,transparent);
---navbg:#18181bf5;--navline:#2a2a35;
---logo:#ffffff;--radius:14px;
---font:'Oswald', system-ui, sans-serif;--tprop:border-color}
+--navbg:#f7fee7f5;--navline:#e8e8ec;
+--logo:#1a2e05;--radius:14px;
+--font:'Source Sans 3', system-ui, sans-serif;--tprop:border-color}
 
-:root{--bg0:#18181b;--bg1:#27272a;--accent:#f97316;--text:#e4e4e7;--muted:#71717a}
-.nav{--navbg:#18181bf2;--navline:#3f3f46;--logo:#fff}
-.logo{text-transform:uppercase;letter-spacing:.06em}
-.hero{padding:140px 0;background:
-linear-gradient(105deg,var(--bg0) 55%,transparent 55%),url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=70') center/cover}
-.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);text-transform:uppercase;line-height:1;margin-bottom:20px}
-.hero h1 b{color:var(--accent)}
-.hero p{color:var(--muted);margin-bottom:34px;max-width:46ch}
-.btn{display:inline-flex;background:var(--accent);color:#18181b;padding:16px 40px;border-radius:0;
-text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
-border:2px solid var(--accent);transition:all .2s}
-.btn:hover{background:transparent;color:var(--accent)}
-.kicker{letter-spacing:.18em}
-.services{padding:92px 0;background:var(--bg1)}
-.card{border-radius:4px;border:1px solid #3f3f46;background:var(--bg0)}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card .cicon{border-radius:4px}
-.about{background:var(--bg0);border-top:3px solid var(--accent);padding:90px 0}
-.contact{background:var(--bg1);padding:90px 0}
-.ccard{border-radius:4px;border:1px solid #3f3f46;background:var(--bg0)}
-.ccard b{color:var(--accent)}
-.mapframe{border-radius:4px;border:1px solid #3f3f46}
+:root{--bg0:#f7fee7;--bg1:#eaf4d5;--accent:#3a5f15;--text:#1a2e05;--muted:#6b8a3a}
+.nav{--navbg:#f7fee7f5;--navline:#e5dfc3;--logo:var(--text)}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:82vh;background:var(--bg0)}
+.hero .wrap{padding:90px 40px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero-photo{height:100%;min-height:380px;background:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=70') center/cover;
+border-radius:0 0 0 80px}
+@media(max-width:840px){.hero{grid-template-columns:1fr}.hero-photo{order:-1;min-height:230px;border-radius:0}}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-bottom:18px}
+.hero p{color:var(--muted);margin-bottom:30px;font-size:1.1rem}
+.btn{display:inline-flex;background:var(--accent);color:#fff;padding:15px 36px;border-radius:10px;
+text-decoration:none;font-weight:700;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.services{padding:88px 0;background:#fff}
+.card{border-radius:16px;border:1px solid #eee9d5;background:var(--bg0)}
+.card .cicon{border-radius:50%}
+.about{background:var(--bg1);padding:88px 0}
+.contact{padding:88px 0;background:#fff}
+.ccard{border-radius:16px;border:1px solid #eee9d5;background:var(--bg0)}
+.mapframe{border-radius:16px}
 </style>
 </head>
 <body>
