@@ -72,6 +72,39 @@ footer{border-top:1px solid var(--navline);padding:36px 0;margin-top:30px}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .hours{margin-top:18px;color:var(--muted)}
 .hours strong{color:var(--text)}
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:36px}
+.gitem{height:190px;border-radius:var(--radius,14px);background-size:cover;background-position:center;
+transition:transform .3s,filter .3s;filter:saturate(.92)}
+.gitem:hover{transform:scale(1.025) rotate(-.4deg);filter:saturate(1.1)}
+@media(max-width:640px){.gitem{height:140px}}
+/* stats */
+.stats{display:flex;flex-wrap:wrap;gap:44px;margin-top:34px}
+.stat b{font-size:2.2rem;font-weight:800;color:var(--accent);letter-spacing:-.02em;display:block;line-height:1.1}
+.stat span{color:var(--muted);font-size:.88rem}
+/* testimonials */
+.testimonials{background:var(--bg1,var(--soft,#f5f7fa))}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.tcard{background:var(--cardbg,#fff);border-radius:var(--radius,14px);padding:28px 24px;
+border-top:3px solid var(--accent);box-shadow:0 4px 16px rgba(16,24,40,.06)}
+.ticon{font-size:1.8rem;margin-bottom:12px}
+.tcard p{color:var(--text)}
+.testi-note{margin-top:24px;color:var(--muted);font-size:.9rem;text-align:center}
+/* industry ambient decorations (floating leaves / gears / bubbles...) */
+.ambient{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.ambient span{position:absolute;display:block;opacity:.5;animation:floaty 14s ease-in-out infinite}
+.ambient span:nth-child(1){left:8%;top:18%;animation-delay:0s;font-size:28px}
+.ambient span:nth-child(2){left:78%;top:12%;animation-delay:-4s;font-size:22px;animation-duration:17s}
+.ambient span:nth-child(3){left:62%;top:64%;animation-delay:-8s;font-size:26px;animation-duration:20s}
+.ambient span:nth-child(4){left:22%;top:70%;animation-delay:-2s;font-size:20px;animation-duration:15s}
+.ambient span:nth-child(5){left:88%;top:48%;animation-delay:-6s;font-size:24px;animation-duration:18s}
+@keyframes floaty{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  25%{transform:translateY(-16px) rotate(8deg)}
+  50%{transform:translateY(-4px) rotate(-5deg)}
+  75%{transform:translateY(-14px) rotate(4deg)}
+}
+@media(prefers-reduced-motion:reduce){.ambient span{animation:none}}
 
 
 :root{--cardbg:#ffffff;
@@ -126,6 +159,11 @@ text-decoration:none;font-weight:700;transition:transform .2s}
 </nav>
 
 <header id="top" class="hero">
+<div class="ambient" aria-hidden="true">
+  <span>🍃</span><span>🍃</span>
+  <span>🍃</span><span>🍃</span>
+  <span>🍃</span>
+</div>
 <div class="wrap"><span class="badge">Řemeslné služby</span><h1>Zahradnické služby Štěpán s.r.o. — spolehlivě a profesionálně</h1><p>Jsou tu pro vás v Poděbrady. Kontaktujte nás ještě dnes.</p><a class="btn" href="tel:+420****0000">📞 Zavolejte nám</a></div>
 </header>
 
@@ -148,8 +186,44 @@ text-decoration:none;font-weight:700;transition:transform .2s}
   <div class="kicker reveal">O nás</div>
   <h2 class="reveal">Zahradnické služby Štěpán s.r.o.</h2>
   <p class="reveal lead-p">Zahradnické služby Štěpán s.r.o. je prověřovaná firma s oprávněním pro: zahradnické služby štěpán s.r.o.. Pracujeme pořádně, férově a za dohodnutou cenu.</p>
+  
+  <div class="stats reveal">
+    <div class="stat"><b>10+</b><span>let zkušeností</span></div><div class="stat"><b>100 %</b><span>spokojenost</span></div><div class="stat"><b>24 h</b><span>reakce na poptávku</span></div>
+  </div>
+  
   <p class="hours reveal"><strong>Otevírací doba:</strong> Po–Pá dle domluvy · So–Ne zavřeno</p>
+  
+  <div class="gallery">
+    <div class="gitem reveal" style="background-image:url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=65')" role="img" aria-label="Ukázka práce 1"></div><div class="gitem reveal" style="background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=65')" role="img" aria-label="Ukázka práce 2"></div><div class="gitem reveal" style="background-image:url('https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=800&q=65')" role="img" aria-label="Ukázka práce 3"></div>
+  </div>
+  
 </div></section>
+
+
+<section id="prednosti" class="testimonials"><div class="wrap">
+  <div class="kicker reveal">Proč k nám</div>
+  <h2 class="reveal">Naše přednosti</h2>
+  <div class="testi-grid">
+    
+    <blockquote class="tcard reveal">
+      <div class="ticon" aria-hidden="true">🤝</div>
+      <p>Osobní přístup a férová domluva — u nás nejste jen číslo.</p>
+    </blockquote>
+    
+    <blockquote class="tcard reveal">
+      <div class="ticon" aria-hidden="true">⏱️</div>
+      <p>Dodržujeme dohodnuté termíny, pracujeme čistě a pořádně.</p>
+    </blockquote>
+    
+    <blockquote class="tcard reveal">
+      <div class="ticon" aria-hidden="true">💬</div>
+      <p>Poradíme i s věcmi, na které jste se neptali — bez poplatku.</p>
+    </blockquote>
+    
+  </div>
+  <p class="testi-note reveal">(Po spuštění zde budou i zkušenosti našich prvních zákazníků.)</p>
+</div></section>
+
 
 <section id="kontakt" class="contact"><div class="wrap">
   <div class="kicker reveal">Kontakt</div>
